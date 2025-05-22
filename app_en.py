@@ -62,9 +62,9 @@ if uploaded_file:
     img_gray = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2GRAY)
     img_hsv = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2HSV)
 
-    st.image(image, caption="📷 Ảnh gốc",width=512)
-    st.image(img_gray, caption="🔍 Ảnh Grayscale", channels="GRAY", width=512)
-    st.image(cv2.cvtColor(img_hsv, cv2.COLOR_HSV2RGB), caption="🎨 Ảnh HSV", width=512)
+    st.image(image, caption="📷 Original Image",width=512)
+    st.image(img_gray, caption="🔍 Grayscale Image", channels="GRAY", width=512)
+    st.image(cv2.cvtColor(img_hsv, cv2.COLOR_HSV2RGB), caption="🎨 HSV Image", width=512)
     st.success("✅ Successfully converted to Grayscale and HSV!")
 
     blurred = cv2.GaussianBlur(img_gray, (9, 9), 0)
