@@ -308,7 +308,7 @@ if uploaded_file:
             fun_comment = random.choice(fun_diagnosis_dict.get(emotion, ["Expression too mysterious to decode! 🤔"]))
             with col1 if idx % 2 == 0 else col2:
                 st.image(cv2.cvtColor(face_crop, cv2.COLOR_BGR2RGB),
-                         caption=f"Face #{idx+1}: {emotion} {emoji_dict[emotion]} ({score:.2f})\\n{fun_comment}",
+                         caption=f"Face #{idx+1}: {emotion} {emoji_dict[emotion]} ({score:.2f}) {fun_comment}",
                          width=512)
 
         st.image(cv2.cvtColor(annotated_img, cv2.COLOR_BGR2RGB),
